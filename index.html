@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--BMITool Created By @FraggyMan 2026-->
+        <title>FraggyMan BMI Tool</title>
+        <style>
+            /* Root and Animations */
+            :root {
+                color-scheme: dark;
+            }
+            /* Base tag styles */
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            header, article {
+                border-bottom-style: solid;
+                border-bottom-color: rgb(31, 30, 30);
+                padding-bottom: 20px;
+            }
+            input[type="number"], input[type="number"]:focus {
+                background-color: Canvas;
+                border-style: solid;
+                border-color: rgb(31, 30, 30);
+                outline: none;
+                font-size: 1.2em;
+            }
+            input[type="radio"] {
+                accent-color: yellow;
+            }
+            footer {
+                text-align: center;
+            }
+            /* IDs */
+            #header-icon {
+                height: 64px;
+                float: left;
+                margin-right: 10px;
+            }
+            #calculator-output {
+                color: red;
+            }
+            /* Classes */
+            .section-input {
+                margin-bottom: 15px;
+            }
+        </style>
+        <meta name="author" content="FraggyMan">
+        <meta name="description" content="A tool for calculating BMI.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="assets/icon.png">
+    </head>
+    <body>
+        <header>
+            <img src="assets/icon.png" id="header-icon" alt="BMI Tool Logo">
+            <h1>BMI Tool</h1>
+        </header>
+        <article>
+            <h1>BMI Calculator</h1>
+            <div class="section-input">
+                <input type="radio" name="unit" id="standard" checked>
+                <label for="standard">Standard (US)</label>
+                <input type="radio" name="unit" id="metric">
+                <label for="metric">Metric</label>
+            </div>
+            <div class="section-input">
+                <label for="height">Height(in):</label>
+                <input type="number" id="height" placeholder="Height">
+            </div>
+            <div class="section-input">
+                <label for="weight">Weight(lb):</label>
+                <input type="number" id="weight" placeholder="Weight">
+            </div>
+            <div id="output">
+                <h1><span id="calculator-output"></span> <span id="category-output"></span><span style="opacity: 0%;">a</span></h1>
+            </div>
+        </article>
+        <footer>
+            <p>FraggyMan BMI Tool ©<span id="year">2026</span></p>
+            <p><a href="https://www.cdc.gov/growth-chart-training/hcp/using-bmi/calculating-bmi.html">How does each formula work?</a> - <a href="https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html">What do these categories mean?</a> - <a href="">Help on this application</a> - <a href="https://github.com/FraggyMan">More apps by FraggyMan</a></p>
+        </footer>
+        <div id="scripts">
+            <script src="bmitool.js" id="bmi-tool"></script>
+            <script id="autofill-copyright-year">
+                const datetime = new Date();
+                const copyrightYear = document.getElementById("year");
+                copyrightYear.innerText = datetime.getFullYear();
+            </script>
+        </div>
+    </body>
+</html>
