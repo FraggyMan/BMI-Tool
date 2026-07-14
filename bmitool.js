@@ -24,13 +24,13 @@ function calculate() {
         category = "(Overweight)";
     } else if (bmi < 35) {
         outputText.style.color = "#ff5e00";
-        category = "(Obese (Class 1))";
+        category = "(Obese Class 1)";
     } else if (bmi < 40) {
         outputText.style.color = "#ff0000";
-        category = "(Obese (Class 2))";
+        category = "(Obese Class 2)";
     } else {
         outputText.style.color = "#410303";
-        category = "(Obese (Class 3))";
+        category = "(Obese Class 3)";
     }
 
     if (!bmi || bmi == Infinity) {
